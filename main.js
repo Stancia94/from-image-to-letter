@@ -29,9 +29,10 @@ function getImageUrl(selectedFile) {
 
 const inputFileElement = document.getElementById("files");
 const holst = document.querySelector('#text');
-holst.innerHTML = '';
 
 inputFileElement.addEventListener('change', event => {
+  holst.innerHTML = '';
+
   const selectedFile = inputFileElement.files[0];
   getImageUrl(selectedFile).then(urlResult => {
     const img = new Image();
